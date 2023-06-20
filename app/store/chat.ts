@@ -344,7 +344,7 @@ export const useChatStore = create<ChatStore>()(
             try {
               let res = null;
               const reqFn = (path: string, method: string, body?: any) => {
-                return fetch("/api/midjourney/mj/" + path, {
+                return fetch("/mj/" + path, {
                   method: method,
                   headers: getHeaders(),
                   body: body,
@@ -445,7 +445,7 @@ export const useChatStore = create<ChatStore>()(
                 const fetchStatus = (taskId: string) => {
                   setTimeout(async () => {
                     const statusRes = await fetch(
-                      `/api/midjourney/mj/task/${taskId}/fetch`,
+                      `/mj/task/${taskId}/fetch`,
                       {
                         method: "GET",
                         headers: getHeaders(),

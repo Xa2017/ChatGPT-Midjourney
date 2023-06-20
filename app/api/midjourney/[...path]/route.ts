@@ -33,7 +33,7 @@ async function handle(
     }
 
     const reqPath = `${req.nextUrl.pathname}${req.nextUrl.search}`.replaceAll(
-        "/api/midjourney/",
+        "/",
         "",
     );
 
